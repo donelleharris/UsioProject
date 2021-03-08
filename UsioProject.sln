@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsioProject", "UsioProject\UsioProject.csproj", "{D7189488-FB34-4A6B-83FD-1FCEF303060A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7189488-FB34-4A6B-83FD-1FCEF303060A}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{D7189488-FB34-4A6B-83FD-1FCEF303060A}.Debug|anycpu.Build.0 = Debug|anycpu
+		{D7189488-FB34-4A6B-83FD-1FCEF303060A}.Release|anycpu.ActiveCfg = Release|anycpu
+		{D7189488-FB34-4A6B-83FD-1FCEF303060A}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2BF4078-CE53-40A7-8AE6-8920C4960BB0}
+	EndGlobalSection
+EndGlobal
