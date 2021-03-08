@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace UsioProject1
+namespace UsioProject
 {
     class Program
     {
         public static void Main(string[] args)
         {
-            
+
             foreach (string line in File.ReadLines(@"OrderFile.txt"))
             {
-                Order order = new Order();
-                Customer customer = new Customer();
-                if (line.StartsWith("100"))
+                try
                 {
-                    order.parseLine100(line, customer);
+                    Order order = new Order();
+                   
+                    if (line.StartsWith("100"))
+                    {
+                        order.parseLine100(line);
+                    }
+                    else
+                    {
+                        order.parseOrderDetails(line, order.Customer);
+                    }
                 }
-                else
+                catch (FileNotFoundException e)
                 {
-                    order.parseOrderDetails(line, order.Customer);
+                    Console.WriteLine(e.Message);
                 }
+                
 
             }
         }
@@ -38,12 +46,14 @@ namespace UsioProject1
         public Boolean Completed { get; set; }
         public List<OrderDetail> OrderDetail;
         public Boolean Success = false;
-        public List<string> ErrorMsg;
+        public List<string> ErrorMsg { get; set; } = new List<string>();
 
         public Order() { }
 
-        public void parseLine100(string line, Customer customer)
+        public void parseLine100(string line)
         {
+
+            Customer customer = new Customer();
             try
             {
                 OrderNumber = int.Parse(line.Substring(3, 10));
